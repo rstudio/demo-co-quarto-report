@@ -1,0 +1,9 @@
+---
+title: "Customer churn report: `r params$product` product"
+format: blastula::blastula_email
+editor: visual
+params:
+  product: "Standard"
+---
+
+## Customer churn

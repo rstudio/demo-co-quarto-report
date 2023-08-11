@@ -1,15 +1,10 @@
 ---
-title: "Customer churn report: `r params$product` product"
-subtitle: "A weekly report of customer churn"
-date: "`r Sys.Date()`"
+title: "Churn report - body"
 format: html
 editor: visual
-title-block-banner: "#004AAD"
 execute: 
   echo: false
   warning: false
-params:
-  product: "Standard"
 ---
 
 ```{r}
@@ -31,9 +26,9 @@ color_palette <-
 #board <- pins::board_rsconnect(server = "connect.posit.it")
 
 churn <- 
-  read_csv("data/churn.csv") |> 
-  #pins::pin_read(board, "sara.altman/simulated_churn") |> 
-  filter(product == params$product)
+  read_csv("data/churn.csv") # |> 
+  #pins::pin_read(board, "sara.altman/simulated_churn") # |> 
+  # filter(product == params$product)
 
 states <- read_rds("data/states.rds")
   #pins::pin_read(board, "sara.altman/states")
