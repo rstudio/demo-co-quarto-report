@@ -1,0 +1,12 @@
+format:
+  html:
+    theme: sandstone
+    mainfont: Open Sauce Sans
+    monofont: Lato
+    fontsize: 1.4rem
+    fontcolor: "#040548"
+    title-block-banner: "#EEF3F6"
+    title-block-banner-color: "#040548"
+    background-image: images/demo-co-logo-transparent.png
+css: custom.css
+
