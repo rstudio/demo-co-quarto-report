@@ -1,0 +1,39 @@
+---
+title: "Customer churn report"
+subtitle: "A weekly report of customer churn"
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+title-block-banner: "#004AAD"
+execute: 
+  echo: false
+  warning: false
+---
+
+```{r}
+library(knitr)
+library(blastula)
+
+# Day and time to send email report
+email_day <- "Tue"
+email_hour <- 7
+```
+
+```{r, results='asis'}
+report_body <- knit_child("01_body.qmd", quiet = TRUE)
+cat(report_body, sep= "\n")
+```
+
+```{r connect-email}
+# Send the report email once a week
+day <- lubridate::wday(Sys.Date(), label = TRUE)
+hour <- lubridate::hour(Sys.time())
+
+if (day == email_day & hour == email_hour) {
+  render_connect_email(input = "02_email.qmd") |> 
+    attach_connect_email(subject = "Weekly update: Customer churn")
+} else {
+  suppress_scheduled_email() 
+}
+```
+

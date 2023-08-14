@@ -3,7 +3,6 @@
 library(charlatan)
 library(tidyverse)
 library(readr)
-library(sf)
 library(pins)
 
 set.seed(123)

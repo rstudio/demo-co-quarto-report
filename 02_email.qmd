@@ -1,0 +1,16 @@
+---
+title: "Test email"
+format: blastula::blastula_email
+editor: visual
+---
+
+# Weekly customer churn report
+
+```{r results='asis'}
+#| echo: false
+
+library(knitr)
+
+report_body <- knit_child("01_body.qmd", quiet = TRUE)
+cat(report_body, sep= "\n")
+```
