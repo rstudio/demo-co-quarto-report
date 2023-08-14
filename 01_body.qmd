@@ -1,10 +1,5 @@
 ---
-title: "Churn report - body"
-format: html
-editor: visual
-execute: 
-  echo: false
-  warning: false
+
 ---
 
 ```{r}

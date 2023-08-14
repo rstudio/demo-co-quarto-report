@@ -1,5 +1,4 @@
-title: "Customer Churn Report: `r params$product` product"
-subtitle: "Updated: `r Sys.Date()`"
+title: "Customer Churn Report"
 editor: visual
 execute:
   echo: false
@@ -14,6 +13,6 @@ format:
     mainfont: Open Sauce Sans
     monofont: Lato
     fontsize: 1.4rem
-    fontcolor: "#040548"
+    #fontcolor: "#040548"
 css: custom.css
 

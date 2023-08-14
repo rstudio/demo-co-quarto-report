@@ -1,13 +1,5 @@
 ---
-title: "Customer churn report"
-subtitle: "A weekly report of customer churn"
-date: "`r Sys.Date()`"
-format: html
-editor: visual
-title-block-banner: "#004AAD"
-execute: 
-  echo: false
-  warning: false
+subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
 ---
 
 ```{r}
@@ -36,4 +28,3 @@ if (day == email_day & hour == email_hour) {
   suppress_scheduled_email() 
 }
 ```
-
