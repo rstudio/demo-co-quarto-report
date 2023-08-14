@@ -13,7 +13,6 @@ execute:
 
 library(tidyverse)
 library(gt)
-library(sf)
 
 # Color palette
 color_palette <-
@@ -125,24 +124,4 @@ churn |>
   tab_header(
     title = "Purchase characteristics by contract type and churn status"
   )
-```
-
-## Churn by state
-
-```{r message=FALSE}
-#| echo: false
-churn |> 
-  group_by(state) |> 
-  summarize(percent_churn = sum(churn) / n()) |> 
-  ungroup() |> 
-  left_join(states, join_by(state == "NAME")) |> 
-  ggplot(aes(fill = percent_churn, geometry = geometry)) +
-  geom_sf() +
-  theme_void() +
-  scale_fill_gradient(
-    low = "white", 
-    high = color_palette[[1]],
-    labels = scales::label_percent()
-  ) +
-  labs(fill = "Percent churn") 
 ```
