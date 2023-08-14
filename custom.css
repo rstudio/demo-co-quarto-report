@@ -1,8 +1,6 @@
 .quarto-title-block .quarto-title-banner {
-  background-image: url(images/DemoCo-Logo-Transparent-Final.png);
-  background-size: 200px;
-  background-position: left;
   background-repeat: no-repeat;
-  padding-left: 100px;
+  background-size: contain;
   background-origin: content-box;
+  background-position: relative;
 }

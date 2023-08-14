@@ -32,6 +32,15 @@ churn <-
 
 states <- read_rds("data/states.rds")
   #pins::pin_read(board, "sara.altman/states")
+
+```
+
+```{r, echo=FALSE}
+htmltools::img(
+  src = knitr::image_uri("images/DemoCo-Logo-Transparent-Final.png"), 
+  alt = 'logo', 
+  style = 'position:absolute; top:0; right:0; padding:30px; width:220px; height:220px'
+)
 ```
 
 ## Overview
