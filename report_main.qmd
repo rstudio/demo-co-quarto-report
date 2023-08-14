@@ -15,7 +15,7 @@ library(knitr)
 library(blastula)
 
 # Day and time to send email report
-email_day <- "Mon"
+email_day <- "Tue"
 email_hour <- 7
 ```
 
