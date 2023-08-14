@@ -1,0 +1,9 @@
+---
+title: "Customer churn report: `r params$product` product"
+output: blastula::blastula_email
+---
+
+```{r, results='asis'}
+report_body <- knit_child("01_body.qmd", quiet = TRUE)
+cat(report_body, sep= "\n")
+```
