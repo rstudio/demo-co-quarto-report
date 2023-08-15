@@ -1,0 +1,17 @@
+---
+title: "Customer Churn Report"
+output: blastula::blastula_email
+---
+
+# Weekly customer churn report
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r results='asis', echo=FALSE}
+library(knitr)
+
+report_body <- knit_child("02_body.qmd", quiet = TRUE)
+cat(report_body, sep= "\n")
+```

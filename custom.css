@@ -1,0 +1,10 @@
+.quarto-title-block .quarto-title-banner {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-position: relative;
+}
+
+h1, h2, h3 {
+  color: #4b4f51;
+}

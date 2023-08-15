@@ -1,27 +1,19 @@
 ---
-title: "Churn report - body"
-format: html
 editor: visual
-execute: 
-  echo: false
-  warning: false
 ---
 
 ```{r}
-#| echo: false
-#| include: false
-
 library(tidyverse)
 library(gt)
 
 # Color palette
 color_palette <-
   c(
-    "#0E85D1",
-    "#DD6E42",
-    "#004AAD",
-    "#13295F",
-    "#E8DAB2"
+    "#86C7ED",
+    "#040548",
+    "#7A6C5D",
+    "#A54657",
+    "#EEF3F6"
   )
 
 # Read in data from pins
@@ -31,25 +23,29 @@ churn <-
   read_csv("data/churn.csv") # |> 
   #pins::pin_read(board, "sara.altman/simulated_churn") # |> 
   # filter(product == params$product)
-
-states <- read_rds("data/states.rds")
-  #pins::pin_read(board, "sara.altman/states")
 ```
 
-```{r}
-#| echo: false
-htmltools::img(
-  src = knitr::image_uri("images/logo.png"), 
-  alt = 'logo', 
-  style = 'position:absolute; top:0; right:0; padding:10px; width:170px; height:170px'
-)
+## Overview
+
+```{r churn-calculation}
+churn_2022 <-
+  churn |> 
+  mutate(
+    churn = 
+      if_else(!is.na(date) & year(date) == 2023, FALSE, churn)
+  ) |> 
+  summarize(percent_churn = sum(churn) / n() * 100) |> 
+  pull(percent_churn) |> 
+  round(1)
 ```
+
+Understanding our customer churn is essential to DemoCo's success. In 2022, our customer churn was `r churn_2022`% - leading to revenue loss of \$2.2 million. **Our 2023 goal is for customer churn to be under 10%.**
 
 ## Churn by quarter
 
 ```{r}
-#| echo: false
 churn |> 
+  filter(!is.na(reason)) |> 
   group_by(year = year(date), quarter = quarter(date), reason) |> 
   summarize(total_churn = sum(churn), total = n(), .groups = "drop_last") |> 
   mutate(
@@ -58,6 +54,7 @@ churn |>
   ) |> 
   ungroup() |> 
   filter(!is.na(reason)) |> 
+  mutate(reason = fct_reorder(reason, percent_churn, .desc = TRUE)) |> 
   ggplot(
     aes(
       glue::glue("{year} Q{quarter}"), 
@@ -68,20 +65,21 @@ churn |>
   geom_point() +
   geom_line(aes(group = reason)) +
   scale_color_manual(values = color_palette) +
+  scale_y_continuous(labels = scales::label_percent()) +
   theme_minimal() +
   labs(
     x = "Quarter",
-    y = "Percent churn",
+    y = "Percent",
     color = "Reason",
-    title = "Percent churn by reason and quarter"
+    title = "Reason for churn by quarter"
   )
 ```
 
 ## Contract type
 
 ```{r}
-#| echo: false
 churn |> 
+  mutate(churn = fct_rev(as.factor(churn))) |> 
   ggplot(aes(contract, last_purchase_days_ago, fill = churn)) +
   geom_boxplot() +
   scale_fill_manual(values = color_palette) +
@@ -98,7 +96,6 @@ churn |>
 ## Purchase characteristics
 
 ```{r}
-#| echo: false
 churn |>
   group_by(contract, churn) |>
   summarize(
