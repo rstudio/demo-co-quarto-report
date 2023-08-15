@@ -3,8 +3,6 @@ editor: visual
 execute:
   echo: false
   warning: false
-title-block-banner: "#EEF3F6"
-title-block-banner-color: "#040548"
 format:
   html:
     embed-resources: true
@@ -13,6 +11,6 @@ format:
     mainfont: Open Sauce Sans
     monofont: Lato
     fontsize: 1.4rem
-    #fontcolor: "#040548"
+    fontcolor: "#383a3c"
 css: custom.css
 

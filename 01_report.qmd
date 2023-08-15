@@ -1,5 +1,10 @@
 ---
 subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
+title-block-banner: "#EEF3F6"
+title-block-banner-color: "#040548"
+resource_files:
+- data/churn.csv
+- images/logo.png
 ---
 
 ```{r}
@@ -11,8 +16,16 @@ email_day <- "Tue"
 email_hour <- 7
 ```
 
+```{r}
+htmltools::img(
+  src = knitr::image_uri("images/logo.png"), 
+  alt = 'logo', 
+  style = 'position:absolute; top:0; right:0; padding:30px; width:220px; height:220px'
+)
+```
+
 ```{r, results='asis'}
-report_body <- knit_child("01_body.qmd", quiet = TRUE)
+report_body <- knit_child("02_body.qmd", quiet = TRUE)
 cat(report_body, sep= "\n")
 ```
 
@@ -22,9 +35,9 @@ day <- lubridate::wday(Sys.Date(), label = TRUE)
 hour <- lubridate::hour(Sys.time())
 
 if (day == email_day & hour == email_hour) {
-  render_connect_email(input = "02_email.qmd") |> 
+  render_connect_email(input = "03_em ail.Rmd") |>
     attach_connect_email(subject = "Weekly update: Customer churn")
 } else {
-  suppress_scheduled_email() 
+  suppress_scheduled_email()
 }
 ```
