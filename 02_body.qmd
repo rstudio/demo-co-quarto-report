@@ -52,8 +52,8 @@ churn |>
     year_quarter_total = sum(total),
     percent_churn = total_churn / year_quarter_total
   ) |> 
-  ungroup() |> 
-  filter(!is.na(reason)) |> 
+  ungroup() |>  
+  filter(year == 2023 | quarter > 2) |> 
   mutate(reason = fct_reorder(reason, percent_churn, .desc = TRUE)) |> 
   ggplot(
     aes(
@@ -73,24 +73,6 @@ churn |>
     color = "Reason",
     title = "Reason for churn by quarter"
   )
-```
-
-## Contract type
-
-```{r}
-churn |> 
-  mutate(churn = fct_rev(as.factor(churn))) |> 
-  ggplot(aes(contract, last_purchase_days_ago, fill = churn)) +
-  geom_boxplot() +
-  scale_fill_manual(values = color_palette) +
-  theme_minimal() +
-  labs(
-    x = "Contract type",
-    y = "Days since last purchase",
-    fill = "Churned",
-    title = "Churn status by contract type and days since purchase"
-  )
-  
 ```
 
 ## Purchase characteristics
@@ -121,4 +103,22 @@ churn |>
   tab_header(
     title = "Purchase characteristics by contract type and churn status"
   )
+```
+
+## Contract type
+
+```{r}
+churn |> 
+  mutate(churn = fct_rev(as.factor(churn))) |> 
+  ggplot(aes(contract, last_purchase_days_ago, fill = churn)) +
+  geom_boxplot() +
+  scale_fill_manual(values = color_palette) +
+  theme_minimal() +
+  labs(
+    x = "Contract type",
+    y = "Days since last purchase",
+    fill = "Churned",
+    title = "Churn status by contract type and days since purchase"
+  )
+  
 ```
