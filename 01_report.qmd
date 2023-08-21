@@ -5,6 +5,8 @@ title-block-banner-color: "#040548"
 resource_files:
 - data/churn.csv
 - images/logo.png
+- 03_email.Rmd
+- custom.css
 ---
 
 ```{r}

@@ -1,0 +1,17 @@
+---
+title: "Customer Churn Report"
+subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
+format: demopdf-pdf
+editor: visual
+---
+
+```{r include=FALSE}
+library(knitr)
+library(ggplot2)
+theme_update(axis.text.x = element_text(size = 1))
+```
+
+```{r, results='asis'}
+report_body <- knit_child("02_body.qmd", quiet = TRUE)
+cat(report_body, sep= "\n")
+```
