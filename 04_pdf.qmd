@@ -7,6 +7,8 @@ editor: visual
 
 ```{r include=FALSE}
 library(knitr)
+library(ggplot2)
+theme_update(axis.text.x = element_text(size = 1))
 ```
 
 ```{r, results='asis'}
