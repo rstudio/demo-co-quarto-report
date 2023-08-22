@@ -37,7 +37,7 @@ day <- lubridate::wday(Sys.Date(), label = TRUE)
 hour <- lubridate::hour(Sys.time())
 
 if (day == email_day & hour == email_hour) {
-  render_connect_email(input = "03_em ail.Rmd") |>
+  render_connect_email(input = "03_email.Rmd") |>
     attach_connect_email(subject = "Weekly update: Customer churn")
 } else {
   suppress_scheduled_email()
