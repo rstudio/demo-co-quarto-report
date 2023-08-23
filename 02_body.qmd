@@ -19,8 +19,7 @@ color_palette <-
   )
 
 # Read in data from pin
-board <- 
-  pins::board_connect()
+board <- pins::board_connect()
 
 churn <- 
   pins::pin_read(board, "sara.altman/simulated_churn") 
