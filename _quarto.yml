@@ -8,8 +8,7 @@ format:
     embed-resources: true
     smooth-scroll: true
     theme: sandstone
-    mainfont: Open Sauce Sans
-    monofont: Lato
+    mainfont: sans-serif
     fontsize: 1.4rem
     fontcolor: "#383a3c"
 css: custom.css

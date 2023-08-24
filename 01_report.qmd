@@ -12,10 +12,6 @@ resource_files:
 ```{r}
 library(knitr)
 library(blastula)
-
-# Day and time to send email report
-email_day <- "Tue"
-email_hour <- 7
 ```
 
 ```{r}
@@ -32,14 +28,7 @@ cat(report_body, sep= "\n")
 ```
 
 ```{r connect-email}
-# Send the report email once a week
-day <- lubridate::wday(Sys.Date(), label = TRUE)
-hour <- lubridate::hour(Sys.time())
-
-if (day == email_day & hour == email_hour) {
-  render_connect_email(input = "03_em ail.Rmd") |>
-    attach_connect_email(subject = "Weekly update: Customer churn")
-} else {
-  suppress_scheduled_email()
-}
+# Send out a formatted email when the report runs
+render_connect_email(input = "./03_email.Rmd") |>
+  attach_connect_email(subject = "Weekly update: Customer churn")
 ```

@@ -5,6 +5,7 @@ editor: visual
 ```{r}
 library(tidyverse)
 library(gt)
+library(rsconnect)
 
 # Color palette
 color_palette <-
@@ -13,21 +14,20 @@ color_palette <-
     "#040548",
     "#7A6C5D",
     "#A54657",
-    "#EEF3F6"
+    "#EEF3F6",
+    "#BCFFC3"
   )
 
-# Read in data from pins
-# board <- pins::board_rsconnect(server = "connect.posit.it")
+# Read in data from pin
+board <- pins::board_connect()
 
 churn <- 
-  read_csv("data/churn.csv") # |> 
-  #pins::pin_read(board, "sara.altman/simulated_churn") # |> 
-  # filter(product == params$product)
+  pins::pin_read(board, "sara.altman/simulated_churn") 
 ```
 
 ## Overview
 
-```{r churn-calculation}
+```{r}
 churn_2022 <-
   churn |> 
   mutate(
