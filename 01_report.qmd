@@ -5,7 +5,6 @@ title-block-banner-color: "#040548"
 resource_files:
 - data/churn.csv
 - images/logo.png
-- 03_email.Rmd
 - custom.css
 ---
 
@@ -25,10 +24,4 @@ htmltools::img(
 ```{r, results='asis'}
 report_body <- knit_child("02_body.qmd", quiet = TRUE)
 cat(report_body, sep= "\n")
-```
-
-```{r connect-email}
-# Send out a formatted email when the report runs
-render_connect_email(input = "./03_email.Rmd") |>
-  attach_connect_email(subject = "Weekly update: Customer churn")
 ```
