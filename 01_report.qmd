@@ -19,7 +19,7 @@ library(blastula)
 htmltools::img(
   src = knitr::image_uri("images/logo.png"), 
   alt = 'logo', 
-  style = 'position:absolute; top:0; right:0; padding:30px; width:220px; height:220px'
+  style = 'position:absolute; top:0; right:0; padding:30px; max-width: 100%; height: auto; width:220px; height:220px'
 )
 ```
 
@@ -27,7 +27,3 @@ htmltools::img(
 
 {{< include 02_body.qmd >}}
 
-```{r, results='asis'}
-#report_body <- knit_child("02_body.qmd", quiet = TRUE)
-#cat(report_body, sep= "\n")
-```
