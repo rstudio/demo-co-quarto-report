@@ -27,7 +27,3 @@ htmltools::img(
 
 {{< include 02_body.qmd >}}
 
-```{r, results='asis'}
-#report_body <- knit_child("02_body.qmd", quiet = TRUE)
-#cat(report_body, sep= "\n")
-```
