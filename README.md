@@ -1,6 +1,6 @@
 # DemoCo Customer Churn Quarto Report
 
-This repository contains an example report that summarizes customer churn for DemoCo, a fake company. The main report, `01_report.qmd` is published to Connect and can be viewed [here](https://colorado.posit.co/rsc/demoCo-churn/)).
+This repository contains an example report that summarizes customer churn for DemoCo, a fake company. The main report, `01_report.qmd` is published to Connect and can be viewed [here](https://colorado.posit.co/rsc/demoCo-churn/).
 
 The repository also contains:
 
