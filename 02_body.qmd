@@ -18,12 +18,6 @@ color_palette <-
     "#BCFFC3"
   )
 
-# board <- 
-#   board_connect("envvar", server = "https://colorado.posit.co/rsc")
-# 
-# churn <- 
-#   pins::pin_read(board, "sara.altman/simulated_churn") 
-
 churn <- read_csv("data/churn.csv")
 ```
 
