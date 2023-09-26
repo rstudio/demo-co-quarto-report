@@ -9,9 +9,9 @@ The repository also contains:
 
 ## Build the reports
 
-This files in this repository create two different reports: an HTML report called `01_report.html` and a PDF report called `03_pdf.pdf`. You can render the reports locally by:
+This files in this repository create two different reports: an HTML report called `01_report.html` and a PDF report called `03_pdf.pdf`. Follow these steps to render the reports locally:
 
-1.  Fork and clone this repository.
+1.  **Fork and clone this repository.** 
 2.  **Render the HTML report:** Open `01_report.qmd` and click *Render*. Note: you'll need to [install Quarto](https://quarto.org/docs/get-started/) if you haven't already.
 3.  **Render the PDF report:** Open `03_pdf.qmd` and click *Render*.
 
@@ -23,7 +23,9 @@ There are multiple ways to publish Quarto reports to Connect. One way is to use 
 
 ## Use as a template
 
-To modify the main HTML report:
+You can also use this repository as a template for your own reports. 
+
+Here are some ways to modify the HTML report:
 
 -   Swap out the logo located in `images/logo.png` for your own logo.
 -   Change the color scheme by changing the [color_palette object](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/02_body.qmd#L11), defined in `02_body.qmd`.
