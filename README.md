@@ -15,6 +15,8 @@ This files in this repository create two different reports: an HTML report calle
 2.  **Render the HTML report:** Open `01_report.qmd` and click *Render*. Note: you'll need to [install Quarto](https://quarto.org/docs/get-started/) if you haven't already.
 3.  **Render the PDF report:** Open `03_pdf.qmd` and click *Render*.
 
+![](images/diagram.png)
+
 ### Publish to Posit Connect
 
 We've published the HTML report to Connect. The report is set to run once a week. You can publish the report to your own Connect account. See this [publishing guide](https://quarto.org/docs/publishing/rstudio-connect.html) for more details. 
