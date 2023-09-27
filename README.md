@@ -1,6 +1,6 @@
 # DemoCo Customer Churn Quarto Report
 
-This repository contains an example report that summarizes customer churn for DemoCo, an example company. The main report, `01_report.qmd` is published to Connect and can be viewed [here](https://colorado.posit.co/rsc/demoCo-churn/).
+This project contains an example report that summarizes customer churn for DemoCo, an example company. The main report, `01_report.qmd` is published to Connect and can be viewed [here](https://colorado.posit.co/rsc/demoCo-churn/).
 
 The repository also contains:
 
@@ -9,23 +9,22 @@ The repository also contains:
 
 ## Build the reports
 
-This files in this repository create two different reports: an HTML report called `01_report.html` and a PDF report called `03_pdf.pdf`. Follow these steps to render the reports locally:
+This files in this repository create two different reports: an HTML report called `01_report.html` and a PDF report called `03_pdf.pdf`. Follow these steps to render the reports:
 
-1.  **Fork and clone this repository.** 
-2.  **Render the HTML report:** Open `01_report.qmd` and click *Render*. Note: you'll need to [install Quarto](https://quarto.org/docs/get-started/) if you haven't already.
-3.  **Render the PDF report:** Open `03_pdf.qmd` and click *Render*.
+1.  **Render the HTML report:** Open `01_report.qmd` and click *Render*. Note: you'll need to [install Quarto](https://quarto.org/docs/get-started/) if you haven't already.
+2.  **Render the PDF report:** Open `03_pdf.qmd` and click *Render*.
 
 ![](images/diagram.png)
 
 ### Publish to Posit Connect
 
-We've published the HTML report to Connect. The report is set to run once a week. You can publish the report to your own Connect account. See this [publishing guide](https://quarto.org/docs/publishing/rstudio-connect.html) for more details. 
+We've published the HTML report to Connect. The report is set to run once a week. You can publish the report to your own Connect account. See this [publishing guide](https://quarto.org/docs/publishing/rstudio-connect.html) for more details.
 
-There are multiple ways to publish Quarto reports to Connect. One way is to use the *Publish* button in the RStudio IDE, found in the upper-right corner of the Editor pane. The button looks like this: ![](images/publish-button.png). Click ![](images/publish-button.png) > _Publish Document_ > _Posit Connect_ > _Publish document with source code_ > Add the URL of your Connect server > _Publish_. 
+There are multiple ways to publish Quarto reports to Connect. One way is to use the *Publish* button in the RStudio IDE, found in the upper-right corner of the Editor pane. The button looks like this: ![](images/publish-button.png). Click ![](images/publish-button.png) \> *Publish Document* \> *Posit Connect* \> *Publish document with source code* \> Add the URL of your Connect server \> *Publish*.
 
 ## Use as a template
 
-You can also use this repository as a template for your own reports. 
+You can also use this repository as a template for your own reports.
 
 Here are some ways to modify the HTML report:
 
