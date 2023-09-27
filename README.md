@@ -22,6 +22,10 @@ We've published the HTML report to [Connect](https://colorado.posit.co/rsc/demoC
 
 See this [guide](https://quarto.org/docs/publishing/rstudio-connect.html) for publishing Quarto documents for more details.
 
+## Themes
+
+Both the HTML and PDF reports use [custom Quarto formats](https://quarto.org/docs/extensions/formats.html). You can find both formats in the `_extensions` directory. The HTML report uses the `democo` format, and the PDF report uses the `demopdf` format.
+
 ## Use as a template
 
 You can also use this project as a template for your own reports.
@@ -29,10 +33,11 @@ You can also use this project as a template for your own reports.
 Here are some ways to modify the HTML report:
 
 -   Swap out the logo located in `images/logo.png` for your own logo.
--   Change the color scheme by changing the [color_palette object](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/02_body.qmd#L11), defined in `02_body.qmd`.
+-   Change the color scheme of the plots by changing the [color_palette object](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/02_body.qmd#L11), defined in `02_body.qmd`.
 -   Read in different data in `02_body.qmd`, and create your own plots.
+-   Modify the theme by editing the Quarto extension located in `_extensions/democo`. For more information about custom Quarto HTML themes, see [this guide](https://quarto.org/docs/output-formats/html-themes.html).
 
-To modify the look of the PDF report, edit the Quarto extension located in `_extensions/demopdf`:
+To modify the style of of the PDF report, edit the Quarto extension located in `_extensions/demopdf`:
 
 -   Again, swap out the logo `logo.png` for your own logo.
 -   Update the [extension color scheme](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/_extensions/demopdf/demopdf.tex#L15), found in `demopdf.tex`. `light` defines the side panel color and `dark` defines the title and heading font color.
