@@ -5,8 +5,8 @@ title-block-banner-color: '#040548'
 resource_files:
 - data/churn.csv
 - images/logo.png
-- custom.css
-- header.html
+- assets/custom.css
+- assets/view-on-github.html
 - 02_body.qmd
 ---
 
@@ -22,6 +22,6 @@ htmltools::img(
 )
 ```
 
-{{< include header.html >}}
+{{< include assets/view-on-github.html >}}
 
 {{< include 02_body.qmd >}}

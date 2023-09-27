@@ -11,5 +11,5 @@ format:
     mainfont: sans-serif
     fontsize: 1.4rem
     fontcolor: "#383a3c"
-css: custom.css
+css: assets/custom.css
 
