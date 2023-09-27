@@ -1,11 +1,10 @@
 ---
 subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
-title-block-banner: '#EEF3F6'
-title-block-banner-color: '#040548'
+format:
+  democo-html: default
 resource_files:
 - data/churn.csv
 - images/logo.png
-- assets/custom.css
 - assets/view-on-github.html
 - 02_body.qmd
 ---

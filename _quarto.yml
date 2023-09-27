@@ -9,7 +9,4 @@ format:
     smooth-scroll: true
     theme: sandstone
     mainfont: sans-serif
-    fontsize: 1.4rem
-    fontcolor: "#383a3c"
-css: assets/custom.css
 
