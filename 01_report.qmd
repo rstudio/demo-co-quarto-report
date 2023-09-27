@@ -12,7 +12,6 @@ resource_files:
 
 ```{r}
 library(knitr)
-library(blastula)
 ```
 
 ```{r}
@@ -26,4 +25,3 @@ htmltools::img(
 {{< include header.html >}}
 
 {{< include 02_body.qmd >}}
-
