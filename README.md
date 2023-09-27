@@ -2,6 +2,8 @@
 
 This project contains an example report that summarizes customer churn for DemoCo, an example company. The main report, `01_report.qmd` is published to Connect and can be viewed [here](https://colorado.posit.co/rsc/demoCo-churn/).
 
+The source code for the project is on [GitHub](https://github.com/rstudio/demo-co-quarto-report) and the project is available to on [Posit Cloud](https://posit.cloud/content/6644960).
+
 The repository also contains:
 
 -   `02_body.qmd`: This Quarto document contains the body of the report. `01_report.qmd` renders `02_body.qmd` as a child document.
