@@ -5,7 +5,6 @@ editor: visual
 ```{r}
 library(tidyverse)
 library(gt)
-library(rsconnect)
 
 # Color palette
 color_palette <-
