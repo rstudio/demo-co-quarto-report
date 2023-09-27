@@ -1,0 +1,35 @@
+/*-- scss:defaults --*/
+$dark-gray: #383a3c;
+$medium-gray: #5e6062;
+$light-gray: #EEF3F6;
+$dark-blue: #040548;
+
+
+/*-- scss:rules --*/
+
+// Quarto banner
+
+.quarto-title-block .quarto-title-banner {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-position: relative;
+  color: $dark-blue;
+  background: $light-gray;
+}
+
+// Headers
+
+// Banner header text color
+.quarto-title-banner h1, .quarto-title-banner h2 {
+    color: $dark-blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $medium-gray;
+}
+
+body {
+  color: $dark-gray;
+  font-size: 1.5rem;
+}

@@ -1,18 +1,15 @@
 ---
 subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
-title-block-banner: '#EEF3F6'
-title-block-banner-color: '#040548'
+format: democo-html
 resource_files:
 - data/churn.csv
 - images/logo.png
-- custom.css
-- header.html
+- assets/view-on-github.html
 - 02_body.qmd
 ---
 
 ```{r}
 library(knitr)
-library(blastula)
 ```
 
 ```{r}
@@ -23,7 +20,6 @@ htmltools::img(
 )
 ```
 
-{{< include header.html >}}
+{{< include assets/view-on-github.html >}}
 
 {{< include 02_body.qmd >}}
-
