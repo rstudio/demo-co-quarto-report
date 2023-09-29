@@ -9,4 +9,12 @@ contributes:
       embed-resources: true
       smooth-scroll: true
       theme: [sandstone, custom.scss]
-
+    pdf:
+      include-in-header:
+      - "demopdf.tex"
+      include-before-body:
+       - "pagestyle.tex"
+      toc: false
+      code-block-bg: light
+      linkcolor: highlight
+      urlcolor: highlight
