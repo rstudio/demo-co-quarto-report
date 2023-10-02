@@ -3,10 +3,3 @@ editor: visual
 execute:
   echo: false
   warning: false
-format:
-  html:
-    embed-resources: true
-    smooth-scroll: true
-    theme: sandstone
-    mainfont: sans-serif
-
