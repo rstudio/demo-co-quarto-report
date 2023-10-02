@@ -2,10 +2,9 @@
 subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
 format: 
   democo-html: default
+  democo-pdf: default
 resource_files:
 - data/churn.csv
-- images/logo.png
-- assets/view-on-github.html
 - 02_body.qmd
 ---
 
@@ -13,14 +12,5 @@ resource_files:
 library(knitr)
 ```
 
-```{r}
-htmltools::img(
-  src = knitr::image_uri("images/logo.png"), 
-  alt = 'logo', 
-  style = 'position:absolute; top:0; right:0; padding:30px; width:220px; height:220px'
-)
-```
-
-{{< include assets/view-on-github.html >}}
-
 {{< include 02_body.qmd >}}
+

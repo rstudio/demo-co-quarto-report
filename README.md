@@ -7,14 +7,14 @@ The source code for the project is on [GitHub](https://github.com/rstudio/demo-c
 The repository also contains:
 
 -   `02_body.qmd`: This Quarto document contains the body of the report. `01_report.qmd` renders `02_body.qmd` as a child document.
--   `03_pdf.qmd`: A PDF version of the report, which also renders `02_body.qmd` as a child document. This PDF reports uses a custom [Quarto extension](https://github.com/rstudio/demo-co-quarto-report/tree/main/_extensions/demopdf) to render a styled PDF.
+-   `_extensions/democo`: A custom Quarto theme with both HTML and PDF formats.
 
 ## Build the reports
 
-This files in this project create two different reports: an HTML report called `01_report.html` and a PDF report called `03_pdf.pdf`. Follow these steps to render the reports:
+`01_report.qmd` can render both an HTML or PDF report. Follow these steps to render the reports:
 
-1.  **Render the HTML report:** Open `01_report.qmd` and click *Render*.
-2.  **Render the PDF report:** Open `03_pdf.qmd` and click *Render*.
+1.  **Render the HTML report:** Open `01_report.qmd` and click on the drop-down arrow next to the *Render* button. Click *Render* *democo-html*.
+2.  **Render the PDF report:** Open `01_report.qmd` and click on the drop-down arrow next to the *Render* button. Click *Render* *democo-pdf*.
 
 ![](images/diagram.png){width="500"}
 
@@ -26,20 +26,17 @@ See this [guide](https://quarto.org/docs/publishing/rstudio-connect.html) for pu
 
 ## Themes
 
-Both the HTML and PDF reports use [custom Quarto formats](https://quarto.org/docs/extensions/formats.html). You can find both formats in the `_extensions` directory. The HTML report uses the `democo` format, and the PDF report uses the `demopdf` format.
+Both the HTML and PDF reports use a [custom Quarto format](https://quarto.org/docs/extensions/formats.html). You can find the custom format in the `_extensions` directory.
 
 ## Use as a template
 
 You can also use this project as a template for your own reports.
 
-Here are some ways to modify the HTML report:
+Here are some ways to modify the reports:
 
--   Swap out the logo located in `images/logo.png` for your own logo.
--   Change the color scheme of the plots by changing the [color_palette object](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/02_body.qmd#L11), defined in `02_body.qmd`.
+-   Change the color scheme of the plots by changing the [color palette object](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/02_body.qmd#L11), defined in `02_body.qmd`.
 -   Read in different data in `02_body.qmd`, and create your own plots.
 -   Modify the theme by editing the Quarto extension located in `_extensions/democo`. For more information about custom Quarto HTML themes, see [this guide](https://quarto.org/docs/output-formats/html-themes.html).
-
-To modify the style of of the PDF report, edit the Quarto extension located in `_extensions/demopdf`:
-
--   Again, swap out the logo `logo.png` for your own logo.
--   Update the [extension color scheme](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/_extensions/demopdf/demopdf.tex#L15), found in `demopdf.tex`. `light` defines the side panel color and `dark` defines the title and heading font color.
+    -   Change `logo-with-slogan.png` to change the logo image used in the HTML report.
+    -   Change `logo.png` to change the logo image used in the PDF report.
+-   Update the PDF [extension color scheme](https://github.com/rstudio/demo-co-quarto-report/blob/587c5eb6c543aaf9e7702ec3f0ab6ce2fb77476e/_extensions/demopdf/demopdf.tex#L15) in `demopdf.tex`. `light` defines the side panel color and `dark` defines the title and heading font color

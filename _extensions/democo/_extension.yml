@@ -5,6 +5,9 @@ quarto-required: ">=1.4.0"
 contributes:
   formats:
     html:
+      include-before-body:
+      - "view-on-github.html"
+      - "logo.html"
       title-block-banner: true
       embed-resources: true
       smooth-scroll: true
