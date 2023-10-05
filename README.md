@@ -16,6 +16,23 @@ You can build the reports yourself on [Posit Cloud](https://posit.cloud/content/
 
 ![](images/diagram.png)
 
+### Change the product type
+
+`churn_report.qmd` includes a [parameter](https://quarto.org/docs/computations/parameters.html#knitr), `product`, that controls which product type the report displays. There are three product types in the data: Standard, Premium, Professional.
+
+**To change the product type:**
+
+In the YAML header of `churn_report.qmd`, update the `value` field of the `product` parameter to "Premium" or "Professional", then click *Render*.
+
+---
+params: 
+  product:
+    label: "Product type"
+    value: Professional
+    input: select
+    choices: [Standard, Premium, Professional]
+---
+
 ### Publish to Posit Connect
 
 We've published the HTML report to [Connect](https://colorado.posit.co/rsc/demoCo-churn/). The report is set to run once a week. You can publish the report to your own Connect account using the *Publish* button ![](images/publish-button.png) in the RStudio IDE, found in the upper-right corner of the Editor pane. Click ![](images/publish-button.png) \> *Posit Connect* \> *Publish document with source code* \> Add the URL of your Connect server \> *Publish*.
