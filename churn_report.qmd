@@ -1,5 +1,15 @@
 ---
-editor: visual
+title: "Customer Churn Report: `r params$product` Products"
+subtitle: "Updated: `r format(Sys.Date(), '%B %d, %Y')`"
+params: 
+  product:
+    label: "Product type"
+    value: Professional
+    input: select
+    choices: [Standard, Premium, Professional]
+format:
+  democo-html: default
+  democo-pdf: default
 ---
 
 ```{r}
@@ -17,7 +27,9 @@ color_palette <-
     "#BCFFC3"
   )
 
-churn <- read_csv("data/churn.csv")
+churn <- 
+  read_csv("data/churn.csv") |> 
+  filter(product == params$product)
 ```
 
 ## Overview
@@ -117,3 +129,4 @@ churn |>
   )
   
 ```
+
