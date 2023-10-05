@@ -5,9 +5,6 @@ library(tidyverse)
 library(readr)
 library(pins)
 
-# Change this object if you'd like to deploy elsewhere
-SERVER <- "https://colorado.posit.co/rsc"
-
 file_out <- "data/churn.csv"
 num_customers <- 1e5
 churn_reasons <-
@@ -101,11 +98,4 @@ churn_data <-
   ) |>
   select(-churn_prob) |>
   write_csv(file_out)
-
-# Write data to pin
-board <- board_connect("envvar", server = SERVER)
-
-board |>
-  pin_write(x = churn_data, name = "simulated_churn", type = "rds")
-
 
