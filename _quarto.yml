@@ -1,5 +1,7 @@
-title: "Customer Churn Report"
 editor: visual
 execute:
   echo: false
   warning: false
+resource_files:
+- data/churn.csv
+- 02_body.qmd
