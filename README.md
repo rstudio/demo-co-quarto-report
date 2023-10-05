@@ -25,7 +25,7 @@ See this [guide](https://quarto.org/docs/publishing/rstudio-connect.html) for pu
 
 Both the HTML and PDF reports use a [custom Quarto format](https://quarto.org/docs/extensions/formats.html). You can find the custom format in the `_extensions` directory.
 
-## Use as a template
+## Customize the reports
 
 You can also use this project as a template for your own reports.
 
