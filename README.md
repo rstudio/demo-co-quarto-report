@@ -4,7 +4,7 @@
 
 This Quarto report summarizes customer churn for DemoCo, an example company.
 
--   View the report on [Posit Connect](https://colorado.posit.co/rsc/demoCo-churn/01_report.html)
+-   View the report on [Posit Connect](https://colorado.posit.co/rsc/demoCo-churn/)
 -   Play with the code on [Posit Cloud](https://posit.cloud/content/6644960)
 
 ## Build the reports
