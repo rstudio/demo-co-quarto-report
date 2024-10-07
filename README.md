@@ -4,7 +4,7 @@
 
 This Quarto report summarizes customer churn for DemoCo, an example company.
 
--   View the report on [Posit Connect](https://colorado.posit.co/rsc/demoCo-churn/)
+-   View the report on [Posit Connect](https://pub.current.posit.team/churn-report/)
 -   Play with the code on [Posit Cloud](https://posit.cloud/content/6644960)
 
 ## Build the reports
@@ -35,7 +35,7 @@ params:
 
 ### Publish to Posit Connect
 
-We've published the HTML report to [Connect](https://colorado.posit.co/rsc/demoCo-churn/). The report is set to run once a week. You can publish the report to your own Connect account using the *Publish* button ![](images/publish-button.png) in the RStudio IDE, found in the upper-right corner of the Editor pane. Click ![](images/publish-button.png) \> *Posit Connect* \> *Publish document with source code* \> Add the URL of your Connect server \> *Publish*.
+We've published the HTML report to [Connect](https://pub.current.posit.team/churn-report/). The report is set to run once a week. You can publish the report to your own Connect account using the *Publish* button ![](images/publish-button.png) in the RStudio IDE, found in the upper-right corner of the Editor pane. Click ![](images/publish-button.png) \> *Posit Connect* \> *Publish document with source code* \> Add the URL of your Connect server \> *Publish*.
 
 See this [guide](https://quarto.org/docs/publishing/rstudio-connect.html) for publishing Quarto documents for more details.
 
